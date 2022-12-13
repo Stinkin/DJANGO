@@ -1,0 +1,16 @@
+<html>
+
+<body>
+    {% include 'superior/barra.html' %}
+    <ul>
+        {% if temas_curso %}
+        {% for tema in temas_curso %}
+        <li>{{tema|first|lower}}</li>
+        {% endfor %}
+        {% else %}
+        <p>No hay temas que mostrar</p>
+        {% endif %}
+    </ul>
+</body>
+
+</html>
